@@ -12,6 +12,10 @@
     "website": "https://github.com/akretion/chorus-extra-addons",
     "license": "AGPL-3",
     "depends": ["l10n_fr_chorus_account"],
-    "data": ["views/account_move.xml"],
+    "data": [
+        "views/account_move.xml",
+        "views/res_partner.xml",
+        ],
+    "post_init_hook": "chorus_service_direct_data_mig",
     "installable": True,
 }

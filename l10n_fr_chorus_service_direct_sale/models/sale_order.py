@@ -19,6 +19,7 @@ class SaleOrder(models.Model):
     # I also define a related field of transmit method code here under another name
     service_direct_invoice_transmit_method_code = fields.Char(
         related="partner_invoice_id.customer_invoice_transmit_method_id.code",
+        string="Invoice Transmit Method Code (Technical field)",
     )
 
     def _prepare_invoice(self):

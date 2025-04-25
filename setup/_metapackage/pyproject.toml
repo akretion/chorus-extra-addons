@@ -1,0 +1,12 @@
+[project]
+name = "odoo-addons-akretion-chorus-extra-addons"
+version = "17.0.20250425.0"
+dependencies = [
+    "odoo-addon-l10n_fr_chorus_service_direct>=17.0dev,<17.1dev",
+    "odoo-addon-l10n_fr_chorus_service_direct_sale>=17.0dev,<17.1dev",
+]
+classifiers=[
+    "Programming Language :: Python",
+    "Framework :: Odoo",
+    "Framework :: Odoo :: 17.0",
+]

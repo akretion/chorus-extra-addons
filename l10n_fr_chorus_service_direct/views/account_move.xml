@@ -12,18 +12,11 @@
     <field name="model">account.move</field>
     <field name="inherit_id" ref="l10n_fr_chorus_account.view_move_form" />
     <field name="arch" type="xml">
-        <field name="partner_shipping_id" position="before">
+        <field name="chorus_service_code" position="after">
             <field name="fr_chorus_service_id" invisible="transmit_method_code != 'fr-chorus'" readonly="state != 'draft'"/>
         </field>
-    </field>
-</record>
-
-<record id="view_invoice_tree" model="ir.ui.view">
-    <field name="model">account.move</field>
-    <field name="inherit_id" ref="account.view_invoice_tree" />
-    <field name="arch" type="xml">
-        <field name="invoice_date" position="before">
-            <field name="fr_chorus_service_id" optional="hide" column_invisible="context.get('default_move_type') not in ('out_invoice', 'out_refund', 'out_receipt')" readonly="state != 'draft'"/>
+        <field name="chorus_service_code" position="attributes">
+            <attribute name="invisible">1</attribute>
         </field>
     </field>
 </record>

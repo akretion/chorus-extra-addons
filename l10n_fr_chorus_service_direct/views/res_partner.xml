@@ -9,7 +9,7 @@
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="l10n_fr_chorus_account.view_partner_form" />
         <field name="arch" type="xml">
-            <xpath expr="//page[@name='sales_purchases']//field[@name='fr_chorus_service_id']" position="attributes">
+                <xpath expr="//page[@name='sales_purchases']//group[@name='fr-chorus-child']/field[@name='fr_chorus_service_id']" position="attributes">
                 <attribute name="invisible">1</attribute>
             </xpath>
             <xpath

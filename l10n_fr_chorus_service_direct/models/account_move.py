@@ -15,6 +15,9 @@ class AccountMove(models.Model):
         tracking=True,
         domain="[('partner_id', '=', commercial_partner_id)]",
     )
+    # inherit of field present in l10n_fr_chorus_account
+    chorus_service_code = fields.Char(
+        related='fr_chorus_service_id.code')
 
     # inherit method from l10n_fr_chorus_account
     def _get_chorus_service(self):
